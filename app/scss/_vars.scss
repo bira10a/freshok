@@ -12,6 +12,20 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white:      #FFFFFF;
 
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+   }
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 %flex {
   display: flex;
   justify-content: space-between;
